@@ -93,7 +93,7 @@ function Navbar() {
         <div className="flex items-center gap-4">
 
           <a
-            href="/cv/CV_Miguel_Pineda.pdf"
+            href={`${import.meta.env.BASE_URL}cv/CV_Miguel_Pineda.pdf`}
             download="CV_Miguel_Pineda.pdf"
             className="hidden items-center gap-2 rounded-xl bg-cyan-500 px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-400 md:flex"
           >

@@ -159,7 +159,7 @@
                 <div className="flex flex-col items-center">
 
                     <img
-                    src="/profile.jpg"
+                    src={`${import.meta.env.BASE_URL}profile.jpg`}
                     alt="Miguel Augusto Pineda"
                     className="h-56 w-56 rounded-full border-4 border-cyan-400 object-cover shadow-xl"
                     />
