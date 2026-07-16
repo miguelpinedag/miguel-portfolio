@@ -10,7 +10,7 @@ import AppRouter from "./router/AppRouter";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
 
-    <BrowserRouter>
+    <BrowserRouter basename="/miguel-portfolio">
 
       <AppRouter />
 
