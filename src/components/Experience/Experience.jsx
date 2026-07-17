@@ -13,11 +13,11 @@ function Experience() {
   const experiences = [
     {
       title: "Analista de Datos",
-      company: "Secretaría Distrital de Integración Social (SDIS)",
-      period: "2026",
+      company: "Secretaría Distrital de Integración Social (SDIS) - Departamento Administrativo del Servicio Civil Distrital DASC" ,
+      period: "2025 -2026",
       icon: <Database size={28} />,
       description:
-        "Diseño y construcción de soluciones analíticas para la evaluación y seguimiento de servicios sociales mediante integración de datos, análisis estadístico y visualización estratégica.",
+        "Diseño y construcción de soluciones analíticas para la evaluación y seguimiento de servicios sociales mediante integración de datos, análisis estadístico y visualización estratégica. Actualización de tableros de control y automatización de procesos con Python",
       skills: [
         "Power BI",
         "SQL Server",
@@ -28,8 +28,8 @@ function Experience() {
     },
     {
       title: "Analista BI y Visualización de Datos",
-      company: "Proyectos de Inteligencia de Negocios",
-      period: "2024 - 2026",
+      company: "Ministerio de Salud y Protección Social - Ministerio de Justicia y del Derecho",
+      period: "2023 - 2024",
       icon: <MapPinned size={28} />,
       description:
         "Desarrollo de tableros de control, indicadores KPI y análisis espacial para apoyar la toma de decisiones basada en datos.",

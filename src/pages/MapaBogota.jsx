@@ -31,9 +31,9 @@ function MapaBogota() {
       {/* Mapa */}
 
       <iframe
-        title="Mapa Bogotá"
-        src="/proyectos/mapa/mapa_violencia_ph_bogota.html"
-        className="flex-1 w-full border-0"
+      title="Mapa Bogotá"
+      src={`${import.meta.env.BASE_URL}proyectos/mapa/mapa_violencia_ph_bogota.html`}
+      className="flex-1 w-full border-0"
       />
 
     </div>
