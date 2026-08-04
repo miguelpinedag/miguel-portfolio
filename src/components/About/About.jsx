@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 // Importa tu foto directamente desde assets (o ajusta la ruta si está en otro lado)
-import fotoPerfil from "../../assets/foto_hoja_de_vida.png";
+import fotoPerfil from "../../assets/profile.jpg";
 
 // =====================================================
 // STACK TECNOLÓGICO
