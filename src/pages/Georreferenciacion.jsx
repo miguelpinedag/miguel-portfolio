@@ -1,489 +1,201 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-function Georreferenciacion() {
-
+function Automatizacion() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-
-    <main className="min-h-screen bg-slate-950">
-
-      {/* ===================== HEADER ===================== */}
-
-      <section className="border-b border-slate-800">
-
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-8">
-
-          <div>
-
-            <p className="mb-2 font-semibold uppercase tracking-[0.35em] text-cyan-400">
-
-              Python · GeoPandas · Folium · Shapely
-
-            </p>
-
-            <h1 className="text-5xl font-extrabold text-white">
-
-              Georreferenciación Inteligente
-
-            </h1>
-
-            <p className="mt-5 max-w-4xl text-lg leading-8 text-slate-400">
-
-              Desarrollo de procesos automatizados para convertir,
-              validar y analizar información geográfica mediante
-              Python y librerías especializadas de análisis espacial,
-              permitiendo construir mapas interactivos y apoyar
-              la toma de decisiones basada en datos.
-
-            </p>
-
-          </div>
-
-          <Link
-            to="/"
-            className="rounded-xl border border-cyan-400 px-6 py-3 font-semibold text-cyan-400 transition duration-300 hover:bg-cyan-400 hover:text-slate-950"
-          >
-
-            ← Volver al Portafolio
-
-          </Link>
-
+    <main className="h-screen w-full bg-slate-950 text-slate-300 p-4 md:p-6 overflow-hidden flex flex-col justify-between">
+      {/* BARRA SUPERIOR (HEADER) CON BOTÓN A LA DERECHA */}
+      <header className="mx-auto w-full max-w-7xl flex items-center justify-between border-b border-slate-800/80 pb-3 mb-4 shrink-0">
+        <div>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-cyan-400">
+            Python · Selenium · Power Automate · SharePoint
+          </p>
+          <h1 className="text-xl font-extrabold text-white sm:text-2xl mt-0.5">
+            Automatización & Web Scraping
+          </h1>
         </div>
 
-      </section>
+        <Link
+          to="/#projects"
+          className="rounded-lg bg-cyan-500/10 px-4 py-2 text-xs font-bold text-cyan-400 border border-cyan-500/30 transition duration-300 hover:bg-cyan-400 hover:text-slate-950 shadow-md"
+        >
+          ← Volver al Portafolio
+        </Link>
+      </header>
 
-      {/* ===================== CONTENIDO ===================== */}
-
-      <section className="mx-auto max-w-7xl px-8 py-16">
-
-        <div className="grid gap-14 lg:grid-cols-2">
-
-          <div>
-
-            <h2 className="mb-6 text-3xl font-bold text-white">
-
-              El desafío
-
-            </h2>
-
-            <p className="leading-8 text-slate-400">
-
-              Consolidar información proveniente de diferentes fuentes,
-              validarla espacialmente y transformarla en información
-              georreferenciada lista para análisis territorial.
-
-            </p>
-
-            <h2 className="mb-6 mt-12 text-3xl font-bold text-white">
-
-              La solución
-
-            </h2>
-
-            <p className="leading-8 text-slate-400">
-
-              Se desarrolló una solución completamente automatizada
-              utilizando Python para validar coordenadas, generar
-              geometrías, realizar cruces espaciales, construir mapas
-              interactivos y entregar información lista para apoyar
-              procesos de analítica avanzada.
-
-            </p>
-
-          </div>
-
-          <div>
-
-            <div className="rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-xl">
-
-              <h3 className="mb-6 text-2xl font-bold text-white">
-
-                Tecnologías
-
-              </h3>
-
-              <div className="grid grid-cols-2 gap-4">
-
-                <div className="rounded-xl bg-slate-800 p-4 text-center text-white">
-                  Python
-                </div>
-
-                <div className="rounded-xl bg-slate-800 p-4 text-center text-white">
-                  Pandas
-                </div>
-
-                <div className="rounded-xl bg-slate-800 p-4 text-center text-white">
-                  GeoPandas
-                </div>
-
-                <div className="rounded-xl bg-slate-800 p-4 text-center text-white">
-                  Folium
-                </div>
-
-                <div className="rounded-xl bg-slate-800 p-4 text-center text-white">
-                  Shapely
-                </div>
-
-                <div className="rounded-xl bg-slate-800 p-4 text-center text-white">
-                  OpenPyXL
-                </div>
-
+      {/* Contenedor Grid Principal de 2 Columnas */}
+      <div className="mx-auto grid h-full w-full max-w-7xl gap-6 lg:grid-cols-12 items-stretch overflow-hidden flex-1">
+        {/* ===================== COLUMNA IZQUIERDA (Info y Tarjetas) ===================== */}
+        <div className="lg:col-span-5 flex flex-col justify-between space-y-4">
+          {/* Tarjeta 1: El Desafío */}
+          <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-4 shadow-md flex-1 flex flex-col justify-between">
+            <div>
+              <div className="mb-1.5 flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-cyan-400"></span>
+                <h2 className="text-xs font-bold text-white uppercase tracking-wider">
+                  El Desafío
+                </h2>
               </div>
-
+              <p className="text-[11px] sm:text-xs leading-relaxed text-slate-400">
+                Extracción manual repetitiva de reportes desde portales web con
+                autenticación, seguida de consolidación de archivos Excel y
+                distribución por correo.
+              </p>
             </div>
-
-          </div>
-
-        </div>
-
-        {/* ===================== EDITOR ===================== */}
-
-        <div className="mt-24">
-
-          <h2 className="mb-8 text-center text-3xl font-bold text-white">
-
-            Fragmento del código desarrollado
-
-          </h2>
-
-          <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-slate-700 shadow-2xl">
-
-            <div className="flex items-center gap-2 border-b border-slate-700 bg-slate-900 px-5 py-3">
-
-              <div className="h-3 w-3 rounded-full bg-red-500"></div>
-              <div className="h-3 w-3 rounded-full bg-yellow-400"></div>
-              <div className="h-3 w-3 rounded-full bg-green-500"></div>
-
-              <span className="ml-4 text-sm text-slate-400">
-
-                georreferenciacion.py
-
+            <div className="mt-3 border-t border-slate-800/80 pt-2">
+              <span className="text-[10px] font-medium text-red-400">
+                ⚠ Procesos manuales propensos a error y retrasos.
               </span>
-
             </div>
-
-            <SyntaxHighlighter
-              language="python"
-              style={vscDarkPlus}
-              showLineNumbers
-              wrapLongLines
-              customStyle={{
-                margin: 0,
-                padding: "18px",
-                fontSize: "13px",
-                lineHeight: "0.75rem",
-                background: "#0d1117"
-              }}
-            >
-{`import pandas as pd
-import geopandas as gpd
-import folium
-
-# Lectura de información
-df = pd.read_excel(
-    "Victimas_2025.xlsx"
-)
-
-# Conversión a GeoDataFrame
-gdf = gpd.GeoDataFrame(
-    df,
-    geometry=gpd.points_from_xy(
-        df.Longitud,
-        df.Latitud
-    ),
-    crs="EPSG:4326"
-)
-
-# Cruce espacial
-resultado = gpd.sjoin(
-    gdf,
-    sectores,
-    predicate="within"
-)
-
-# Construcción del mapa
-mapa = folium.Map(
-    location=[4.65, -74.10],
-    zoom_start=11,
-    tiles="CartoDB positron"
-)
-
-folium.GeoJson(
-    resultado
-).add_to(mapa)
-
-mapa.save(
-    "mapa_inteligente_bogota.html"
-)
-`}
-            </SyntaxHighlighter>
-
           </div>
 
-        </div>
-
-        {/* ===================== RESULTADOS ===================== */}
-
-        <div className="mt-24">
-
-          <h2 className="mb-10 text-center text-3xl font-bold text-white">
-
-            Capacidades desarrolladas
-
-          </h2>
-
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-
-            <div className="rounded-2xl border border-slate-800 bg-slate-900 p-7 transition duration-300 hover:-translate-y-2 hover:border-cyan-400">
-
-              <h3 className="text-xl font-bold text-cyan-400">
-
-                Georreferenciación
-
-              </h3>
-
-              <p className="mt-4 leading-7 text-slate-400">
-
-                Conversión automática de registros
-                geográficos utilizando coordenadas
-                y validación espacial.
-
+          {/* Tarjeta 2: La Solución */}
+          <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-4 shadow-md flex-1 flex flex-col justify-between">
+            <div>
+              <div className="mb-1.5 flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-cyan-400"></span>
+                <h2 className="text-xs font-bold text-white uppercase tracking-wider">
+                  La Solución
+                </h2>
+              </div>
+              <p className="text-[11px] sm:text-xs leading-relaxed text-slate-400">
+                Bot desarrollado en <strong>Selenium</strong> para navegación y
+                descarga web automática, integrado con{" "}
+                <strong>Power Automate</strong> y <strong>SharePoint</strong>.
               </p>
-
             </div>
-
-            <div className="rounded-2xl border border-slate-800 bg-slate-900 p-7 transition duration-300 hover:-translate-y-2 hover:border-cyan-400">
-
-              <h3 className="text-xl font-bold text-cyan-400">
-
-                Análisis Espacial
-
-              </h3>
-
-              <p className="mt-4 leading-7 text-slate-400">
-
-                Cruce de información territorial
-                mediante GeoPandas y geometrías
-                espaciales.
-
-              </p>
-
+            <div className="mt-3 border-t border-slate-800/80 pt-2">
+              <span className="text-[10px] font-medium text-emerald-400">
+                ✓ Flujo 100% automatizado en la nube.
+              </span>
             </div>
-
-            <div className="rounded-2xl border border-slate-800 bg-slate-900 p-7 transition duration-300 hover:-translate-y-2 hover:border-cyan-400">
-
-              <h3 className="text-xl font-bold text-cyan-400">
-
-                Automatización
-
-              </h3>
-
-              <p className="mt-4 leading-7 text-slate-400">
-
-                Procesamiento masivo de datos,
-                reduciendo tiempos y errores
-                manuales.
-
-              </p>
-
-            </div>
-
-            <div className="rounded-2xl border border-slate-800 bg-slate-900 p-7 transition duration-300 hover:-translate-y-2 hover:border-cyan-400">
-
-              <h3 className="text-xl font-bold text-cyan-400">
-
-                Visualización
-
-              </h3>
-
-              <p className="mt-4 leading-7 text-slate-400">
-
-                Construcción de mapas interactivos
-                con Folium para facilitar la
-                interpretación de la información.
-
-              </p>
-
-            </div>
-
           </div>
 
-        </div>
-                {/* ===================== MÉTRICAS ===================== */}
-
-        <div className="mt-24">
-
-          <h2 className="mb-10 text-center text-3xl font-bold text-white">
-
-            Impacto de la solución
-
-          </h2>
-
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-
-            <div className="rounded-2xl border border-cyan-500/20 bg-slate-900 p-8 text-center shadow-lg transition duration-300 hover:-translate-y-2 hover:border-cyan-400">
-
-              <p className="text-5xl font-extrabold text-cyan-400">
-
-                +45K
-
-              </p>
-
-              <p className="mt-3 text-slate-300">
-
-                Registros procesados
-
-              </p>
-
+          {/* Tarjeta 3: Tecnologías & Métricas */}
+          <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-4 shadow-md flex-1 flex flex-col justify-between">
+            <div>
+              <div className="mb-2 flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-cyan-400"></span>
+                <h2 className="text-xs font-bold text-white uppercase tracking-wider">
+                  Stack & Métricas
+                </h2>
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {[
+                  "Selenium",
+                  "Power Automate",
+                  "SharePoint",
+                  "Python",
+                  "Pandas",
+                ].map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded bg-slate-800 px-2 py-0.5 text-[10px] font-medium text-cyan-300 border border-slate-700/50"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
 
-            <div className="rounded-2xl border border-cyan-500/20 bg-slate-900 p-8 text-center shadow-lg transition duration-300 hover:-translate-y-2 hover:border-cyan-400">
-
-              <p className="text-5xl font-extrabold text-cyan-400">
-
-                4
-
-              </p>
-
-              <p className="mt-3 text-slate-300">
-
-                Capas geográficas integradas
-
-              </p>
-
+            <div className="mt-3 grid grid-cols-2 gap-2 border-t border-slate-800/80 pt-2 text-center">
+              <div>
+                <p className="text-base font-extrabold text-cyan-400">+90%</p>
+                <p className="text-[9px] text-slate-400 uppercase tracking-wider">
+                  Ahorro de Tiempo
+                </p>
+              </div>
+              <div>
+                <p className="text-base font-extrabold text-cyan-400">Diario</p>
+                <p className="text-[9px] text-slate-400 uppercase tracking-wider">
+                  Ejecución Autónoma
+                </p>
+              </div>
             </div>
-
-            <div className="rounded-2xl border border-cyan-500/20 bg-slate-900 p-8 text-center shadow-lg transition duration-300 hover:-translate-y-2 hover:border-cyan-400">
-
-              <p className="text-5xl font-extrabold text-cyan-400">
-
-                100%
-
-              </p>
-
-              <p className="mt-3 text-slate-300">
-
-                Automatización del proceso
-
-              </p>
-
-            </div>
-
-            <div className="rounded-2xl border border-cyan-500/20 bg-slate-900 p-8 text-center shadow-lg transition duration-300 hover:-translate-y-2 hover:border-cyan-400">
-
-              <p className="text-5xl font-extrabold text-cyan-400">
-
-                HTML
-
-              </p>
-
-              <p className="mt-3 text-slate-300">
-
-                Mapas interactivos generados
-
-              </p>
-
-            </div>
-
           </div>
-
         </div>
 
-        {/* ===================== BENEFICIOS ===================== */}
-
-        <div className="mt-24">
-
-          <h2 className="mb-10 text-center text-3xl font-bold text-white">
-
-            Beneficios obtenidos
-
-          </h2>
-
-          <div className="grid gap-8 lg:grid-cols-3">
-
-            <div className="rounded-3xl border border-slate-800 bg-slate-900 p-8 transition duration-300 hover:border-cyan-400">
-
-              <h3 className="text-2xl font-bold text-cyan-400">
-
-                Mayor eficiencia
-
-              </h3>
-
-              <p className="mt-5 leading-8 text-slate-400">
-
-                Eliminación de procesos manuales mediante automatización
-                del flujo de georreferenciación y validación territorial.
-
-              </p>
-
+        {/* ===================== COLUMNA DERECHA (Código ampliado) ===================== */}
+        <div className="lg:col-span-7 flex flex-col h-full overflow-hidden">
+          <div className="flex-1 overflow-hidden rounded-xl border border-slate-800 bg-slate-900 shadow-xl flex flex-col">
+            {/* Barra superior del editor */}
+            <div className="flex items-center justify-between border-b border-slate-800 bg-slate-950 px-4 py-2.5">
+              <div className="flex items-center gap-1.5">
+                <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
+                <div className="h-2.5 w-2.5 rounded-full bg-yellow-400"></div>
+                <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
+                <span className="ml-2 text-xs font-mono text-slate-400">
+                  selenium_automation_flow.py
+                </span>
+              </div>
+              <span className="text-[10px] font-semibold uppercase text-cyan-400 tracking-wider">
+                Script de Automatización
+              </span>
             </div>
 
-            <div className="rounded-3xl border border-slate-800 bg-slate-900 p-8 transition duration-300 hover:border-cyan-400">
+            {/* Código desplegado */}
+            <div className="flex-1 overflow-auto">
+              <SyntaxHighlighter
+                language="python"
+                style={vscDarkPlus}
+                showLineNumbers
+                wrapLongLines
+                customStyle={{
+                  margin: 0,
+                  padding: "16px",
+                  fontSize: "12px",
+                  lineHeight: "1.45",
+                  background: "#080c14",
+                  height: "100%",
+                }}
+              >
+                {`from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import pandas as pd
+import time
 
-              <h3 className="text-2xl font-bold text-cyan-400">
+# 1. Configuración de Selenium WebDriver
+options = webdriver.ChromeOptions()
+options.add_argument("--headless")  # Modo ejecucion en segundo plano
+driver = webdriver.Chrome(options=options)
 
-                Información confiable
+try:
+    # 2. Autenticación automatizada en portal web
+    driver.get("https://portal-empresa.com/login")
+    driver.find_element(By.ID, "user").send_keys("usuario_auto")
+    driver.find_element(By.ID, "password").send_keys("Pass2026Secure")
+    driver.find_element(By.ID, "btn-login").click()
 
-              </h3>
+    # 3. Navegación e interacción automática
+    wait = WebDriverWait(driver, 10)
+    wait.until(EC.element_to_be_clickable((By.ID, "export-excel"))).click()
+    time.sleep(3) # Espera descarga
 
-              <p className="mt-5 leading-8 text-slate-400">
+    # 4. Procesamiento e Integración con Pandas
+    df = pd.read_excel("downloads/reporte_diario.xlsx")
+    df_clean = df.dropna(subset=["ID_TRANSACCION"])
 
-                Integración de diferentes fuentes de datos garantizando
-                consistencia espacial y calidad de la información.
+    # 5. Sincronización hacia SharePoint y Power Automate
+    df_clean.to_excel("sharepoint_sync/reporte_procesado.xlsx", index=False)
+    print("✓ Proceso completado exitosamente.")
 
-              </p>
-
+finally:
+    driver.quit()`}
+              </SyntaxHighlighter>
             </div>
-
-            <div className="rounded-3xl border border-slate-800 bg-slate-900 p-8 transition duration-300 hover:border-cyan-400">
-
-              <h3 className="text-2xl font-bold text-cyan-400">
-
-                Toma de decisiones
-
-              </h3>
-
-              <p className="mt-5 leading-8 text-slate-400">
-
-                Generación de mapas interactivos que permiten analizar
-                información territorial de forma rápida e intuitiva.
-
-              </p>
-
-            </div>
-
           </div>
-
         </div>
-                     {/* ===================== FOOTER ===================== */}
-
-        <div className="mt-24 border-t border-slate-800 pt-12">
-
-          <div className="mx-auto flex max-w-7xl justify-end">
-
-            <Link
-              to="/"
-              className="rounded-xl border border-cyan-400 px-8 py-4 text-lg font-semibold text-cyan-400 transition duration-300 hover:bg-cyan-400 hover:text-slate-950"
-            >
-              ← Volver al Portafolio
-            </Link>
-
-          </div>
-
-        </div>
-              </section>
-
+      </div>
     </main>
-
   );
-
 }
 
-export default Georreferenciacion;
+export default Automatizacion;

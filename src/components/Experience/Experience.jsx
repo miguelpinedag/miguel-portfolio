@@ -3,127 +3,93 @@ import {
   CalendarDays,
   Database,
   MapPinned,
-  Code2
+  Code2,
 } from "lucide-react";
 
 import "./Experience.css";
 
 function Experience() {
-
   const experiences = [
     {
       title: "Analista de Datos",
-      company: "Secretaría Distrital de Integración Social (SDIS) - Departamento Administrativo del Servicio Civil Distrital DASC" ,
-      period: "2025 -2026",
-      icon: <Database size={28} />,
+      company: "Secretaría Distrital de Integración Social · DASC",
+      period: "2025 – 2026",
+      icon: <Database size={30} />,
       description:
-        "Diseño y construcción de soluciones analíticas para la evaluación y seguimiento de servicios sociales mediante integración de datos, análisis estadístico y visualización estratégica. Actualización de tableros de control y automatización de procesos con Python",
+        "Desarrollo de soluciones de Business Intelligence, automatización con Python, SQL Server y Power BI para fortalecer la toma de decisiones mediante integración, análisis y visualización de datos.",
       skills: [
         "Power BI",
         "SQL Server",
         "Python",
         "Power Query",
-        "Modelamiento de datos"
-      ]
+        "Modelamiento",
+      ],
     },
-    {
-      title: "Analista BI y Visualización de Datos",
-      company: "Ministerio de Salud y Protección Social - Ministerio de Justicia y del Derecho",
-      period: "2023 - 2024",
-      icon: <MapPinned size={28} />,
-      description:
-        "Desarrollo de tableros de control, indicadores KPI y análisis espacial para apoyar la toma de decisiones basada en datos.",
-      skills: [
-        "Dashboards",
-        "DAX",
-        "ETL",
-        "Georreferenciación",
-        "Análisis de información"
-      ]
-    },
-    {
-      title: "Desarrollador de Soluciones Digitales",
-      company: "Proyectos tecnológicos",
-      period: "Experiencia complementaria",
-      icon: <Code2 size={28} />,
-      description:
-        "Construcción de aplicaciones web orientadas a la gestión de información utilizando arquitecturas modernas y buenas prácticas de desarrollo.",
-      skills: [
-        "React",
-        "Spring Boot",
-        "Java",
-        "MySQL",
-        "APIs REST"
-      ]
-    }
-  ];
 
+    {
+      title: "Analista BI",
+      company: "Ministerio de Salud · Ministerio de Justicia",
+      period: "2023 – 2024",
+      icon: <MapPinned size={30} />,
+      description:
+        "Construcción de dashboards ejecutivos, indicadores KPI y análisis geoespacial para apoyar procesos estratégicos y seguimiento institucional.",
+      skills: ["Power BI", "DAX", "ETL", "Geo", "KPIs"],
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Proyectos Tecnológicos",
+      period: "Experiencia complementaria",
+      icon: <Code2 size={30} />,
+      description:
+        "Desarrollo de aplicaciones web modernas utilizando React, Spring Boot, Java, MySQL y APIs REST siguiendo buenas prácticas de arquitectura de software.",
+      skills: ["React", "Spring", "Java", "MySQL", "REST"],
+    },
+  ];
 
   return (
     <section className="experience" id="experience">
-
       <div className="section-title">
         <h2>Experiencia Profesional</h2>
+
         <p>
-          Proyectos y experiencias donde he aplicado datos,
-          tecnología e inteligencia de negocio para generar valor.
+          Experiencia en Business Intelligence, analítica de datos,
+          automatización y desarrollo de soluciones tecnológicas.
         </p>
       </div>
 
-
-      <div className="timeline">
-
+      <div className="experience-grid">
         {experiences.map((item, index) => (
-
-          <article 
-            className="experience-card"
-            key={index}
-          >
-
-            <div className="experience-icon">
-              {item.icon}
-            </div>
-
-
+          <article key={index} className="experience-card">
             <div className="experience-content">
+              <div className="experience-header">
+                <div className="experience-icon">{item.icon}</div>
 
-              <h3>{item.title}</h3>
+                <h3>{item.title}</h3>
+              </div>
 
               <h4>
-                <Briefcase size={16}/>
+                <Briefcase size={16} />
+
                 {item.company}
               </h4>
 
-
               <span className="period">
-                <CalendarDays size={16}/>
+                <CalendarDays size={16} />
+
                 {item.period}
               </span>
 
-
-              <p>
-                {item.description}
-              </p>
-
+              <p>{item.description}</p>
 
               <div className="skills">
-
-                {item.skills.map((skill, i)=>(
-                  <span key={i}>
-                    {skill}
-                  </span>
+                {item.skills.map((skill, i) => (
+                  <span key={i}>{skill}</span>
                 ))}
-
               </div>
-
             </div>
-
           </article>
-
         ))}
-
       </div>
-
     </section>
   );
 }

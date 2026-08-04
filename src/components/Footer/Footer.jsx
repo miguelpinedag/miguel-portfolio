@@ -9,8 +9,6 @@ import {
   FaLinkedin
 } from "react-icons/fa";
 
-import "./Footer.css";
-
 function Footer() {
 
   const whatsappMessage =
@@ -21,124 +19,267 @@ function Footer() {
       whatsappMessage
     )}`;
 
-  return (
+    return (
 
     <footer
       id="contact"
-      className="footer"
+      className="bg-slate-950 border-t border-slate-800 py-14"
     >
 
-      <div className="contact-card">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-        <h2>
+        {/* ====================================================== */}
+        {/* TARJETA PRINCIPAL */}
+        {/* ====================================================== */}
 
-          Transformemos datos en decisiones.
+        <div
+          className="
+            rounded-3xl
+            border
+            border-white/10
+            bg-white/5
+            backdrop-blur-xl
+            px-8
+            py-10
+            shadow-xl
+          "
+        >
 
-        </h2>
+          <div className="mx-auto max-w-3xl text-center">
 
-        <p>
+            <h2
+              className="
+                text-3xl
+                font-bold
+                text-white
+                lg:text-4xl
+              "
+            >
 
-          Estoy disponible para colaborar en proyectos relacionados
-          con análisis de datos, inteligencia de negocios,
-          automatización e inteligencia artificial.
+              Transformemos datos en decisiones.
 
-        </p>
+            </h2>
 
-        <div className="contact-options">
+            <p
+              className="
+                mx-auto
+                mt-5
+                max-w-2xl
+                leading-7
+                text-slate-300
+              "
+            >
 
-          {/* LinkedIn */}
+              Estoy disponible para colaborar en proyectos de
+              Business Intelligence, análisis de datos,
+              automatización de procesos, visualización de
+              información e inteligencia artificial.
 
-          <a
-            href="https://www.linkedin.com/in/mapinedag/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-item"
+            </p>
+
+          </div>
+
+          {/* ====================================================== */}
+          {/* BOTONES */}
+          {/* ====================================================== */}
+
+          <div
+            className="
+              mx-auto
+              mt-10
+              grid
+              max-w-5xl
+              gap-4
+              sm:grid-cols-2
+              lg:grid-cols-4
+            "
           >
 
-            <FaLinkedin size={32} />
+            {/* ====================================================== */}
+            {/* LINKEDIN */}
+            {/* ====================================================== */}
 
-            <span>
+            <a
+              href="https://www.linkedin.com/in/mapinedag/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                flex
+                items-center
+                justify-center
+                gap-3
+                rounded-2xl
+                border
+                border-slate-700
+                bg-slate-900
+                px-5
+                py-5
+                text-white
+                transition
+                duration-300
+                hover:-translate-y-1
+                hover:border-cyan-400
+              "
+            >
 
-              LinkedIn
+              <FaLinkedin size={28} />
 
-            </span>
+              <span className="font-medium">
 
-            <ExternalLink size={15} />
+                LinkedIn
 
-          </a>
+              </span>
 
-          {/* GitHub */}
+              <ExternalLink size={16} />
 
-          <a
-            href="https://github.com/miguelpinedag"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-item"
-          >
+            </a>
 
-            <FaGithub size={32} />
+            {/* ====================================================== */}
+            {/* GITHUB */}
+            {/* ====================================================== */}
 
-            <span>
+            <a
+              href="https://github.com/miguelpinedag"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                flex
+                items-center
+                justify-center
+                gap-3
+                rounded-2xl
+                border
+                border-slate-700
+                bg-slate-900
+                px-5
+                py-5
+                text-white
+                transition
+                duration-300
+                hover:-translate-y-1
+                hover:border-cyan-400
+              "
+            >
 
-              GitHub
+              <FaGithub size={28} />
 
-            </span>
+              <span className="font-medium">
 
-            <ExternalLink size={15} />
+                GitHub
 
-          </a>
+              </span>
 
-          {/* Email */}
+              <ExternalLink size={16} />
 
-          <a
-            href="mailto:ingmiguelpin@gmail.com"
-            className="contact-item"
-          >
+            </a>
 
-            <Mail size={32} />
+            {/* ====================================================== */}
+            {/* EMAIL */}
+            {/* ====================================================== */}
 
-            <span>
+            <a
+              href="mailto:ingmiguelpin@gmail.com"
+              className="
+                flex
+                items-center
+                justify-center
+                gap-3
+                rounded-2xl
+                border
+                border-slate-700
+                bg-slate-900
+                px-5
+                py-5
+                text-white
+                transition
+                duration-300
+                hover:-translate-y-1
+                hover:border-cyan-400
+              "
+            >
 
-              Email
+              <Mail size={26} />
 
-            </span>
+              <span className="font-medium">
 
-          </a>
+                Email
 
-          {/* WhatsApp */}
+              </span>
 
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-item"
-          >
+            </a>
+                        {/* ====================================================== */}
+            {/* WHATSAPP */}
+            {/* ====================================================== */}
 
-            <FaWhatsapp size={32} />
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                flex
+                items-center
+                justify-center
+                gap-3
+                rounded-2xl
+                border
+                border-slate-700
+                bg-slate-900
+                px-5
+                py-5
+                text-white
+                transition
+                duration-300
+                hover:-translate-y-1
+                hover:border-cyan-400
+              "
+            >
 
-            <span>
+              <FaWhatsapp size={28} />
 
-              WhatsApp
+              <span className="font-medium">
 
-            </span>
+                WhatsApp
 
-          </a>
+              </span>
+
+            </a>
+        
+          </div>
 
         </div>
 
-      </div>
+        {/* ====================================================== */}
+        {/* FOOTER INFERIOR */}
+        {/* ====================================================== */}
 
-      <div className="footer-bottom">
+        <div
+          className="
+            mt-10
+            flex
+            flex-col
+            items-center
+            justify-between
+            gap-4
+            border-t
+            border-slate-800
+            pt-6
+            text-sm
+            text-slate-400
+            md:flex-row
+          "
+        >
 
-        <div>
+          <div>
 
-          © {new Date().getFullYear()} Miguel Pineda
+            © {new Date().getFullYear()} Miguel Pineda
 
-        </div>
+          </div>
 
-        <div>
+          <div className="text-center md:text-right">
 
-          Data Analyst | Business Intelligence | Python | IA
+            Data Analyst • Business Intelligence • Python • IA
+
+          </div>
 
         </div>
 

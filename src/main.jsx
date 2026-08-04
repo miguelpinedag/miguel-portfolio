@@ -1,20 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-import "./index.css";
-
 import { BrowserRouter } from "react-router-dom";
-
-import AppRouter from "./router/AppRouter";
+import "./index.css";
+import App from "./App";
+import ScrollToTop from "./utils/ScrollToTop";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-
-    <BrowserRouter basename="/miguel-portfolio">
-
-      <AppRouter />
-
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <ScrollToTop />
+      <App />
     </BrowserRouter>
-
-  </React.StrictMode>
+  </React.StrictMode>,
 );

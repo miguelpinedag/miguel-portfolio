@@ -1,46 +1,34 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 function DashboardUno() {
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <div className="h-screen bg-slate-950 flex flex-col">
-
       {/* Encabezado */}
       <header className="flex items-center justify-between border-b border-slate-800 bg-slate-950 px-8 py-5">
-
         <div>
           <p className="text-cyan-400 uppercase tracking-[0.35em] text-xs font-semibold">
             Business Intelligence
           </p>
 
-          <h1 className="text-3xl font-bold text-white">
-            Dashboard Ejecutivo
-          </h1>
+          <h1 className="text-3xl font-bold text-white">Dashboard Ejecutivo</h1>
         </div>
 
+        {/* Cambio clave: redirige a /#projects */}
         <Link
-          to="/"
+          to="/#projects"
           className="rounded-xl bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:scale-105"
         >
           ← Volver al Portafolio
         </Link>
-
       </header>
 
       {/* Dashboard */}
-
       <iframe
         title="Dashboard Ejecutivo"
         src="https://app.powerbi.com/view?r=eyJrIjoiODAwNDk0MzAtNDk0Yy00MDUwLWFhOGQtMzA5MmRjNTk5ZDc1IiwidCI6ImIzZTMwODA4LWU5YTgtNGYyYS05YmMxLWE3NjBhZTkxMGNmNSIsImMiOjR9"
         className="flex-1 w-full border-0"
         allowFullScreen
       />
-
     </div>
   );
 }
