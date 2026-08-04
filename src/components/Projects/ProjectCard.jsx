@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 function ProjectCard({ title, description, technologies, image, url }) {
   return (
-    <div className="group flex flex-col justify-between overflow-hidden rounded-xl border border-slate-800 bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,.15)]">
+    <div className="group flex flex-col justify-between overflow-hidden rounded-xl border border-slate-800 bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,.15)] h-full">
       <div>
         {/* Imagen */}
-        <div className="relative h-24 overflow-hidden bg-slate-950">
+        <div className="relative h-24 sm:h-28 overflow-hidden bg-slate-950">
           <img
             src={image}
             alt={title}
@@ -17,7 +17,7 @@ function ProjectCard({ title, description, technologies, image, url }) {
         {/* Contenido */}
         <div className="p-3">
           {/* Título completo dinámico */}
-          <h3 className="text-xs sm:text-sm font-bold leading-snug text-white min-h-[2.4rem] flex items-center">
+          <h3 className="text-xs sm:text-sm font-bold leading-snug text-white min-h-[2.2rem] flex items-center">
             {title}
           </h3>
 
@@ -27,7 +27,7 @@ function ProjectCard({ title, description, technologies, image, url }) {
           </p>
 
           {/* Badges de Tecnologías */}
-          <div className="mt-2 flex flex-wrap gap-1 min-h-[2.5rem] items-start">
+          <div className="mt-2 flex flex-wrap gap-1 min-h-[2.2rem] items-start">
             {technologies.map((tech) => (
               <span
                 key={tech}

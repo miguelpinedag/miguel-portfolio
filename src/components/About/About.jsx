@@ -75,7 +75,7 @@ function About() {
             <div className="h-full flex flex-col justify-between rounded-2xl border border-slate-700 bg-slate-950 p-4 shadow-xl">
               <div className="flex flex-col items-center">
                 <img
-                  src="/profile.jpg"
+                  src={`${import.meta.env.BASE_URL}foto_hoja_de_vida.png`}
                   alt="Miguel Augusto Pineda"
                   className="h-28 w-28 rounded-full border-4 border-cyan-400 object-cover shadow-cyan-500/10 shadow-xl"
                 />
