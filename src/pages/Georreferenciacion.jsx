@@ -9,11 +9,11 @@ function Automatizacion() {
   }, []);
 
   return (
-    <main className="min-h-screen lg:h-screen w-full bg-slate-950 text-slate-300 p-3 sm:p-4 md:p-6 lg:overflow-hidden flex flex-col justify-between">
+    <main className="min-h-screen lg:h-screen w-full bg-slate-950 text-slate-300 p-3 sm:p-4 md:p-6 flex flex-col justify-between overflow-y-auto lg:overflow-hidden">
       {/* BARRA SUPERIOR (HEADER) */}
       <header className="mx-auto w-full max-w-7xl flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-800/80 pb-3 mb-4 gap-3 shrink-0">
         <div>
-          <p className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-cyan-400">
+          <p className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-cyan-400">
             Python · Selenium · Power Automate · SharePoint
           </p>
           <h1 className="text-lg sm:text-xl md:text-2xl font-extrabold text-white mt-0.5">
@@ -23,15 +23,15 @@ function Automatizacion() {
 
         <Link
           to="/#projects"
-          className="self-start sm:self-auto rounded-lg bg-cyan-500/10 px-3 py-1.5 sm:px-4 sm:py-2 text-xs font-bold text-cyan-400 border border-cyan-500/30 transition duration-300 hover:bg-cyan-400 hover:text-slate-950 shadow-md"
+          className="self-start sm:self-auto rounded-lg bg-cyan-500/10 px-3 py-1.5 text-xs font-bold text-cyan-400 border border-cyan-500/30 transition duration-300 hover:bg-cyan-400 hover:text-slate-950 shadow-md whitespace-nowrap"
         >
           ← Volver al Portafolio
         </Link>
       </header>
 
       {/* Contenedor Grid Principal */}
-      <div className="mx-auto grid w-full max-w-7xl gap-4 sm:gap-6 lg:grid-cols-12 items-stretch lg:overflow-hidden flex-1 pb-4 lg:pb-0">
-        {/* ===================== COLUMNA IZQUIERDA (Info y Tarjetas) ===================== */}
+      <div className="mx-auto grid w-full max-w-7xl gap-4 lg:grid-cols-12 items-stretch flex-1 pb-6 lg:pb-0">
+        {/* ===================== COLUMNA IZQUIERDA ===================== */}
         <div className="lg:col-span-5 flex flex-col justify-between space-y-3 sm:space-y-4">
           {/* Tarjeta 1: El Desafío */}
           <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-3.5 sm:p-4 shadow-md flex-1 flex flex-col justify-between">
@@ -48,7 +48,7 @@ function Automatizacion() {
                 distribución por correo.
               </p>
             </div>
-            <div className="mt-2.5 sm:mt-3 border-t border-slate-800/80 pt-2">
+            <div className="mt-2.5 border-t border-slate-800/80 pt-2">
               <span className="text-[10px] font-medium text-red-400">
                 ⚠ Procesos manuales propensos a error y retrasos.
               </span>
@@ -70,7 +70,7 @@ function Automatizacion() {
                 <strong>Power Automate</strong> y <strong>SharePoint</strong>.
               </p>
             </div>
-            <div className="mt-2.5 sm:mt-3 border-t border-slate-800/80 pt-2">
+            <div className="mt-2.5 border-t border-slate-800/80 pt-2">
               <span className="text-[10px] font-medium text-emerald-400">
                 ✓ Flujo 100% automatizado en la nube.
               </span>
@@ -125,38 +125,37 @@ function Automatizacion() {
           </div>
         </div>
 
-        {/* ===================== COLUMNA DERECHA (Código ampliado) ===================== */}
-        <div className="lg:col-span-7 flex flex-col min-h-[350px] lg:h-full overflow-hidden">
-          <div className="flex-1 overflow-hidden rounded-xl border border-slate-800 bg-slate-900 shadow-xl flex flex-col">
-            {/* Barra superior del editor */}
-            <div className="flex items-center justify-between border-b border-slate-800 bg-slate-950 px-3 sm:px-4 py-2 sm:py-2.5">
+        {/* ===================== COLUMNA DERECHA (Código) ===================== */}
+        <div className="lg:col-span-7 flex flex-col h-full min-h-[300px]">
+          <div className="flex-1 rounded-xl border border-slate-800 bg-slate-900 shadow-xl flex flex-col overflow-hidden">
+            {/* Barra superior editor */}
+            <div className="flex items-center justify-between border-b border-slate-800 bg-slate-950 px-3 py-2">
               <div className="flex items-center gap-1.5">
                 <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
                 <div className="h-2.5 w-2.5 rounded-full bg-yellow-400"></div>
                 <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
-                <span className="ml-2 text-[11px] sm:text-xs font-mono text-slate-400 truncate max-w-[140px] sm:max-w-none">
+                <span className="ml-2 text-[10px] sm:text-xs font-mono text-slate-400 truncate max-w-[130px] sm:max-w-none">
                   selenium_automation_flow.py
                 </span>
               </div>
-              <span className="text-[9px] sm:text-[10px] font-semibold uppercase text-cyan-400 tracking-wider">
+              <span className="text-[9px] font-semibold uppercase text-cyan-400 tracking-wider">
                 Script
               </span>
             </div>
 
-            {/* Código desplegado */}
-            <div className="flex-1 overflow-auto max-h-[400px] lg:max-h-none">
+            {/* Editor de código con scroll interno */}
+            <div className="flex-1 overflow-x-auto overflow-y-auto max-h-[380px] lg:max-h-none">
               <SyntaxHighlighter
                 language="python"
                 style={vscDarkPlus}
                 showLineNumbers
-                wrapLongLines
                 customStyle={{
                   margin: 0,
                   padding: "12px",
-                  fontSize: "11px",
+                  fontSize: "10.5px",
                   lineHeight: "1.4",
                   background: "#080c14",
-                  height: "100%",
+                  minHeight: "100%",
                 }}
               >
                 {`from selenium import webdriver

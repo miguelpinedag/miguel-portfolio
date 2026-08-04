@@ -6,6 +6,9 @@ import {
   Workflow,
 } from "lucide-react";
 
+// Importa tu foto directamente desde assets (o ajusta la ruta si está en otro lado)
+import fotoPerfil from "../assets/foto_hoja_de_vida.png";
+
 // =====================================================
 // STACK TECNOLÓGICO
 // =====================================================
@@ -68,16 +71,21 @@ function About() {
           </p>
         </div>
 
-        {/* PERFIL + CONTENIDO (con items-stretch para nivelar alturas) */}
+        {/* PERFIL + CONTENIDO */}
         <div className="grid gap-5 lg:grid-cols-[290px_1fr] items-stretch">
-          {/* TARJETA PERFIL (con h-full y flex-col justify-between) */}
+          {/* TARJETA PERFIL */}
           <div className="h-full">
             <div className="h-full flex flex-col justify-between rounded-2xl border border-slate-700 bg-slate-950 p-4 shadow-xl">
               <div className="flex flex-col items-center">
                 <img
-                  src={`${import.meta.env.BASE_URL}foto_hoja_de_vida.png`}
+                  src={fotoPerfil}
                   alt="Miguel Augusto Pineda"
                   className="h-28 w-28 rounded-full border-4 border-cyan-400 object-cover shadow-cyan-500/10 shadow-xl"
+                  onError={(e) => {
+                    // Fallback en caso de que la ruta assets falle y esté en public/
+                    e.target.onerror = null;
+                    e.target.src = "/foto_hoja_de_vida.png";
+                  }}
                 />
 
                 <h3 className="mt-3 text-center text-lg font-bold text-white">
