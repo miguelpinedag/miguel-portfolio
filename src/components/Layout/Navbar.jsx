@@ -13,13 +13,22 @@ function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Sobre Mí", href: "#about" },
-    { name: "Experiencia", href: "#experience" },
-    { name: "Formación", href: "#education" },
-    { name: "Habilidades", href: "#skills" },
-    { name: "Proyectos", href: "#projects" },
-    { name: "Contacto", href: "#contact" },
+    { name: "Sobre Mí", id: "about" },
+    { name: "Experiencia", id: "experience" },
+    { name: "Formación", id: "education" },
+    { name: "Habilidades", id: "skills" },
+    { name: "Proyectos", id: "projects" },
+    { name: "Contacto", id: "contact" },
   ];
+
+  const handleNavClick = (e, id) => {
+    e.preventDefault();
+    setIsOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <motion.header
@@ -32,6 +41,7 @@ function Navbar() {
       <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-8">
         <a
           href="#hero"
+          onClick={(e) => handleNavClick(e, "hero")}
           className="text-2xl font-bold text-slate-900 tracking-tighter"
         >
           Miguel Pineda G<span className="text-blue-600">.</span>
@@ -40,8 +50,9 @@ function Navbar() {
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
-              key={link.name}
-              href={link.href}
+              key={link.id}
+              href={`#${link.id}`}
+              onClick={(e) => handleNavClick(e, link.id)}
               className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
             >
               {link.name}
@@ -68,9 +79,9 @@ function Navbar() {
             <div className="flex flex-col p-6 space-y-4">
               {navLinks.map((link) => (
                 <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
+                  key={link.id}
+                  href={`#${link.id}`}
+                  onClick={(e) => handleNavClick(e, link.id)}
                   className="text-base font-medium text-slate-900"
                 >
                   {link.name}

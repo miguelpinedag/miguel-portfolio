@@ -5,7 +5,7 @@ import profile from "../../assets/images/profile.jpg";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative pt-24 pb-16 bg-white overflow-x-hidden">
+    <section id="hero" className="relative py-12 sm:py-24 bg-white overflow-x-hidden">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-8 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -36,12 +36,15 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
-            <a
-              href="#projects"
+            <button
+              onClick={() => {
+                const element = document.getElementById("projects");
+                element?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="rounded-2xl bg-slate-900 px-6 py-3 font-semibold text-white hover:bg-slate-800 transition flex items-center gap-2 text-base"
             >
               Ver Proyectos <ArrowRight size={20} />
-            </a>
+            </button>
             <div className="flex items-center gap-4">
               <a
                 href="https://www.linkedin.com/in/miguel-pineda-gonzalez/"

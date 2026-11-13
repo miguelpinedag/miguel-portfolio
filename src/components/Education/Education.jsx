@@ -5,8 +5,8 @@ import educationImage from "../../assets/images/education.jpg";
 
 export default function Education() {
   return (
-    <section id="education" className="py-36 bg-white">
-      <div className="mx-auto max-w-[1200px] px-8">
+    <section id="education" className="py-12 sm:py-24 bg-white">
+      <div className="mx-auto max-w-[1200px] px-4 sm:px-8">
         <h2 className="text-3xl font-extrabold text-slate-900 mb-12 text-center">
           Formación Académica
         </h2>
