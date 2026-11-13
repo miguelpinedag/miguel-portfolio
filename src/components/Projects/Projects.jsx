@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
 import comisarias from "../../assets/images/comisarias.png";
@@ -48,36 +49,39 @@ const projects = [
   },
 ];
 
-function Projects() {
+export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="min-h-screen bg-slate-950 pt-16 pb-4 px-4 flex flex-col justify-center items-center"
-    >
-      <div className="mx-auto max-w-7xl w-full">
-        {/* Encabezado */}
-        <div className="mb-3 text-center">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-cyan-400">
-            PORTAFOLIO
-          </p>
-          <h2 className="mt-0.5 text-2xl font-extrabold text-white sm:text-3xl">
+    <section id="projects" className="py-20 bg-white px-6">
+      <div className="mx-auto max-w-[1550px]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-10 text-center"
+        >
+          <h2 className="text-3xl font-extrabold text-slate-900">
             Casos de Éxito
           </h2>
-          <p className="mx-auto mt-1 max-w-2xl text-[11px] text-slate-400 leading-tight">
-            Proyectos reales en BI, Python y analítica geoespacial. Datos e
-            información adaptados para fines demostrativos.
+          <p className="mx-auto mt-2 max-w-xl text-slate-600 text-sm">
+            Proyectos reales en BI, Python y analítica geoespacial.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Grid ajustado */}
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+        <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-stretch">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-slate-50 rounded-2xl p-4 border border-slate-100 hover:shadow-md transition-shadow flex flex-col justify-between"
+            >
+              <ProjectCard {...project} />
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
   );
 }
-
-export default Projects;

@@ -1,92 +1,96 @@
-import { Award, Briefcase, Database, MonitorSmartphone } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import profile from "../../assets/images/profile.jpg";
 
-function Hero() {
+export default function Hero() {
   return (
-    <section
-      id="hero"
-      className="relative overflow-hidden bg-slate-950 pt-35 pb-20"
-    >
-      {/* EFECTOS DE FONDO */}
-      <div className="absolute -top-46 left-1/2 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[180px]" />
-      <div className="absolute right-0 top-40 h-96 w-96 rounded-full bg-blue-600/10 blur-[140px]" />
-      <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-cyan-500/5 blur-[140px]" />
-
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"></div>
-
-      {/* CONTENIDO */}
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-8 lg:grid-cols-2">
-        {/* PRESENTACIÓN */}
-        <div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-sm text-cyan-300">
-            <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            Disponible para nuevas oportunidades
-          </span>
-
-          <h1 className="mt-3 text-2xl font-extrabold leading-tight text-white lg:text-5xl">
-            Transformando datos en decisiones estratégicas.
-          </h1>
-
-          <p className="mt-4 max-w-xl text-base leading-7 text-slate-300 lg:text-lg">
-            Analista de Datos especializado en Business Intelligence, Power BI,
-            Python y SQL. Diseño soluciones analíticas que convierten
-            información compleja en conocimiento para la toma de decisiones.
-          </p>
-        </div>
-
-        {/* DASHBOARD VISUAL */}
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl shadow-[0_0_70px_rgba(6,182,212,.12)]">
-          <div className="mb-5 flex items-center justify-between">
-            <div>
-              <p className="text-sm text-slate-400">Executive Dashboard</p>
-              <h3 className="text-xl font-bold text-white">
-                Indicadores Clave
-              </h3>
-            </div>
-
-            <span className="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-400 font-medium">
-              ● Online
+    <section id="hero" className="relative pt-28 pb-20 bg-white">
+      <div className="mx-auto max-w-[1400px] px-8 grid lg:grid-cols-12 gap-12 items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="lg:col-span-7"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="mb-6 inline-flex items-center gap-3 rounded-full border border-blue-100 bg-blue-50 px-5 py-2 text-sm font-semibold text-blue-700"
+          >
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
             </span>
+            Disponible para nuevos retos
+          </motion.div>
+
+          <h1 className="text-5xl lg:text-7xl font-extrabold text-slate-950 leading-[1.05] tracking-tight">
+            Data Analyst &<br />
+            <span className="text-blue-600">Business Intelligence</span>
+          </h1>
+          <p className="mt-6 text-lg text-slate-600 max-w-2xl leading-relaxed">
+            Magíster en Gerencia de Proyectos e Ingeniero Industrial. Transformo
+            datos complejos en estrategias accionables mediante BI,
+            automatización y analítica avanzada.
+          </p>
+
+          <div className="mt-10 flex items-center gap-6">
+            <a
+              href="#projects"
+              className="rounded-2xl bg-slate-900 px-8 py-4 font-semibold text-white hover:bg-slate-800 transition flex items-center gap-2 text-lg"
+            >
+              Ver Proyectos <ArrowRight size={20} />
+            </a>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.linkedin.com/in/miguel-pineda-gonzalez/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-full bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition"
+              >
+                <FaLinkedin size={22} />
+              </a>
+              <a
+                href="https://github.com/miguelpinedag"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-full bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition"
+              >
+                <FaGithub size={22} />
+              </a>
+              <a
+                href="mailto:ingmiguelpin@gmail.com"
+                className="p-4 rounded-full bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition"
+              >
+                <FaEnvelope size={22} />
+              </a>
+              <a
+                href="https://wa.me/573143118240"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-full bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition"
+              >
+                <FaWhatsapp size={22} />
+              </a>
+            </div>
           </div>
+        </motion.div>
 
-          <div className="space-y-3">
-            <div className="rounded-xl bg-slate-800/70 p-3.5 border border-slate-700/50 flex items-center justify-between">
-              <div>
-                <p className="text-xs text-slate-400">Registros Analizados</p>
-                <h2 className="text-2xl font-bold text-white">40M+</h2>
-              </div>
-              <Database size={24} className="text-cyan-400" />
-            </div>
-
-            <div className="grid grid-cols-2 gap-3">
-              <div className="rounded-xl bg-slate-800/70 p-3.5 border border-slate-700/50">
-                <p className="text-xs text-slate-400">Experiencia</p>
-                <h3 className="mt-1 text-xl font-bold text-cyan-400">
-                  8+ Años
-                </h3>
-              </div>
-
-              <div className="rounded-xl bg-slate-800/70 p-3.5 border border-slate-700/50">
-                <p className="text-xs text-slate-400">Dashboards</p>
-                <h3 className="mt-1 text-xl font-bold text-cyan-400">
-                  20+ Creados
-                </h3>
-              </div>
-            </div>
-
-            <div className="rounded-xl bg-slate-800/70 p-3.5 border border-slate-700/50 flex items-center justify-between">
-              <div>
-                <p className="text-xs text-slate-400">Proyectos Reales</p>
-                <h3 className="text-lg font-bold text-white">
-                  100% Finalizados
-                </h3>
-              </div>
-              <Award size={20} className="text-cyan-400" />
-            </div>
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="lg:col-span-5 relative"
+        >
+          <motion.img
+            whileHover={{ scale: 1.02 }}
+            src={profile}
+            alt="Perfil"
+            className="w-full aspect-square object-cover rounded-[3rem] shadow-xl"
+          />
+        </motion.div>
       </div>
     </section>
   );
 }
-
-export default Hero;

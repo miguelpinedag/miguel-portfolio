@@ -1,33 +1,21 @@
-import {
-  Mail,
-  ExternalLink
-} from "lucide-react";
+import { Mail, ExternalLink } from "lucide-react";
 
-import {
-  FaGithub,
-  FaWhatsapp,
-  FaLinkedin
-} from "react-icons/fa";
+import { FaGithub, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
-
   const whatsappMessage =
     "Hola Miguel, vi tu portafolio y quisiera hablar sobre un proyecto de datos.";
 
-  const whatsappUrl =
-    `https://wa.me/573143118240?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
+  const whatsappUrl = `https://wa.me/573143118240?text=${encodeURIComponent(
+    whatsappMessage,
+  )}`;
 
-    return (
-
+  return (
     <footer
       id="contact"
       className="bg-slate-950 border-t border-slate-800 py-14"
     >
-
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
         {/* ====================================================== */}
         {/* TARJETA PRINCIPAL */}
         {/* ====================================================== */}
@@ -44,9 +32,7 @@ function Footer() {
             shadow-xl
           "
         >
-
           <div className="mx-auto max-w-3xl text-center">
-
             <h2
               className="
                 text-3xl
@@ -55,9 +41,7 @@ function Footer() {
                 lg:text-4xl
               "
             >
-
               Transformemos datos en decisiones.
-
             </h2>
 
             <p
@@ -69,14 +53,10 @@ function Footer() {
                 text-slate-300
               "
             >
-
-              Estoy disponible para colaborar en proyectos de
-              Business Intelligence, análisis de datos,
-              automatización de procesos, visualización de
-              información e inteligencia artificial.
-
+              Estoy disponible para colaborar en proyectos de Business
+              Intelligence, análisis de datos, automatización de procesos,
+              visualización de información e inteligencia artificial.
             </p>
-
           </div>
 
           {/* ====================================================== */}
@@ -94,7 +74,6 @@ function Footer() {
               lg:grid-cols-4
             "
           >
-
             {/* ====================================================== */}
             {/* LINKEDIN */}
             {/* ====================================================== */}
@@ -121,17 +100,11 @@ function Footer() {
                 hover:border-cyan-400
               "
             >
-
               <FaLinkedin size={28} />
 
-              <span className="font-medium">
-
-                LinkedIn
-
-              </span>
+              <span className="font-medium">LinkedIn</span>
 
               <ExternalLink size={16} />
-
             </a>
 
             {/* ====================================================== */}
@@ -160,17 +133,11 @@ function Footer() {
                 hover:border-cyan-400
               "
             >
-
               <FaGithub size={28} />
 
-              <span className="font-medium">
-
-                GitHub
-
-              </span>
+              <span className="font-medium">GitHub</span>
 
               <ExternalLink size={16} />
-
             </a>
 
             {/* ====================================================== */}
@@ -197,17 +164,11 @@ function Footer() {
                 hover:border-cyan-400
               "
             >
-
               <Mail size={26} />
 
-              <span className="font-medium">
-
-                Email
-
-              </span>
-
+              <span className="font-medium">Email</span>
             </a>
-                        {/* ====================================================== */}
+            {/* ====================================================== */}
             {/* WHATSAPP */}
             {/* ====================================================== */}
 
@@ -233,19 +194,11 @@ function Footer() {
                 hover:border-cyan-400
               "
             >
-
               <FaWhatsapp size={28} />
 
-              <span className="font-medium">
-
-                WhatsApp
-
-              </span>
-
+              <span className="font-medium">WhatsApp</span>
             </a>
-        
           </div>
-
         </div>
 
         {/* ====================================================== */}
@@ -268,27 +221,15 @@ function Footer() {
             md:flex-row
           "
         >
-
-          <div>
-
-            © {new Date().getFullYear()} Miguel Pineda
-
-          </div>
+          <div>© {new Date().getFullYear()} Miguel Pineda G.</div>
 
           <div className="text-center md:text-right">
-
             Data Analyst • Business Intelligence • Python • IA
-
           </div>
-
         </div>
-
       </div>
-
     </footer>
-
   );
-
 }
 
 export default Footer;
