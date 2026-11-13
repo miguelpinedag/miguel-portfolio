@@ -59,7 +59,7 @@ export default function Projects() {
           viewport={{ once: true }}
           className="mb-10 text-center"
         >
-          <h2 className="text-3xl font-extrabold text-slate-900">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
             Casos de Éxito
           </h2>
           <p className="mx-auto mt-2 max-w-xl text-slate-600 text-sm">

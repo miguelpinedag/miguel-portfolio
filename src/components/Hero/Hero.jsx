@@ -25,7 +25,7 @@ export default function Hero() {
             Disponible para nuevos retos
           </motion.div>
 
-          <h1 className="text-5xl lg:text-7xl font-extrabold text-slate-950 leading-[1.05] tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-slate-950 leading-[1.05] tracking-tight">
             Data Analyst &<br />
             <span className="text-blue-600">Business Intelligence</span>
           </h1>
