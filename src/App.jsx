@@ -1,15 +1,5 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import AppRouter from "./router/AppRouter";
 
-export default function AppRouter() {
-  return (
-    <HashRouter>
-      {" "}
-      {/* <--- Envuélvelo aquí con HashRouter */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* Tus otras rutas aquí */}
-      </Routes>
-    </HashRouter>
-  );
+export default function App() {
+  return <AppRouter />;
 }

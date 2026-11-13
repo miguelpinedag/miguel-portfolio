@@ -1,24 +1,15 @@
-import { Routes, Route } from "react-router-dom";
-
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
-import MapaBogota from "../pages/MapaBogota";
-import DashboardUno from "../pages/DashboardUno";
-import DashboardDos from "../pages/DashboardDos";
-import Georreferenciacion from "../pages/Georreferenciacion";
+import ScrollToTop from "../utils/ScrollToTop";
 
-function AppRouter() {
+export default function AppRouter() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/proyectos/mapa-bogota" element={<MapaBogota />} />
-      <Route path="/proyectos/dashboard-uno" element={<DashboardUno />} />
-      <Route path="/proyectos/dashboard-dos" element={<DashboardDos />} />
-      <Route
-        path="/proyectos/georreferenciacion"
-        element={<Georreferenciacion />}
-      />
-    </Routes>
+    <HashRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* Agrega aquí tus otras rutas si las tienes */}
+      </Routes>
+    </HashRouter>
   );
 }
-
-export default AppRouter;
